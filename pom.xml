@@ -95,6 +95,7 @@
 	</repositories>
 
 	<build>
+	<pluginManagement>
 		<plugins>
 		
 			<plugin>
@@ -118,7 +119,7 @@
 			</plugins>
 			
 		
-		
+		</pluginManagement>
 	</build>
 
 </project>
