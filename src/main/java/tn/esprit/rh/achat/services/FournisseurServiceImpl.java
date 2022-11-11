@@ -72,7 +72,7 @@ public class FournisseurServiceImpl implements IFournisseurService {
 		return fournisseur;
 	}
 
-	@Override
+	/*@Override
 	public void assignSecteurActiviteToFournisseur(Long idSecteurActivite, Long idFournisseur) {
 		Fournisseur fournisseur = fournisseurRepository.findById(idFournisseur).orElse(null);
 		SecteurActivite secteurActivite = secteurActiviteRepository.findById(idSecteurActivite).orElse(null);
@@ -80,7 +80,7 @@ public class FournisseurServiceImpl implements IFournisseurService {
         fournisseurRepository.save(fournisseur);
 		
 		
-	}
+	}*/
 
 	
 
