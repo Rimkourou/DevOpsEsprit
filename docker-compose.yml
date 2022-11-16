@@ -1,0 +1,29 @@
+version: "3"
+services:
+  back-service:
+    image: amine-achatB  
+    ports:
+      - "8089:8089"
+    environment:
+        SPRING_DATASOURCE_URL: jdbc:mysql://mysqldb/achatdb
+        SPRING_DATASOURCE_USERNAME: root
+        SPRING_DATASOURCE_PASSWORD: root
+    networks:
+      - project-network
+    depends_on:
+      - mysqldb
+ 
+  mysqldb:
+    image: mysql:8
+    ports:
+      - "3306:3306"
+    security_opt:
+      - seccomp:unconfined
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=achatdb
+    networks:
+      - project-network
+     
+networks:
+  project-network: 
